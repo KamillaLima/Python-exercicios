@@ -25,5 +25,7 @@ for p in range(0,len(valores)):
 
 print(f'O maior valor digitado foi {maior} e ele foi encontrado nas posições: ' , end=" ")
 print(*vezesMaior, sep=', ')
+#se eu fosse mostrar apenar uma vez o maior número,uma forma de escrever seria : print(vezesMaior[1].title())
+#OBS:A forma acima APENAS funciona para mostrar UM ÚNICO ELEMENTO
 print(f'\nO menor valor digitado foi {menor} e ele foi encontrado nas posições: ', end=' ')
 print(*vezesMenor, sep =", ")

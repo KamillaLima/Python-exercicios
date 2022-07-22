@@ -1,38 +1,22 @@
 volta = 0
-lista = []
-
-while volta <= 2 :
-    num = int(input((f"Digite o {volta}° valor:")))
-    if volta==0:
-        lista.append(num)
-        print(f"Adicionado na posição {volta} da lista")
-    else:
-        if num in lista:
-            print("Valor duplicado")
-        elif volta == 1 :
-                if num > lista[0]:
-                    print(f'Valor adicionado na posição 1')
-                    lista.insert(1,num)
-                else:
-                    print(f'valor adicionado na posição 0 ')
-                    lista.insert(0,num)
-
-        elif volta ==2 :
-                    if num > lista[0] and num>lista[1]:
-                        print(f'Valor adicionado na posição 2')
-                        lista.insert(2,num)
-                    elif num>lista[0] and num<lista[1]:
-                            print(f'valor adicionado na posição 1 ')
-                            lista.insert(1,num)
-                    else:
-                        print(f'valor adicionado na posição 0 ')
-                        lista.insert(0,num)
-        elif volta==3:
-            if num >lista[0] and num>lista[1] and num>lista[2]:
-                print(f'Valor adicionado na posição 3')
-                lista.insert(3,num)
-            elif num>lista[0] and num<lista[1]
-
-
-    volta+=1
+lista =[]
+for c in range(0,3):
+     n = int(input("Insira um valor : "))
+     #se estivermos na primeira volta (c==0) ou se o valor digitado for maior que o último valor que tinha sido
+     #inserido na lista (len(lista)-1 , aqui to pegando o total da lista e subtraindo um,pra pegar o útimo
+     # valor da lista
+     if c ==0 or n > lista[-1]:
+         lista.append(n)
+         #caso uma das duas condições seja real,não tem necessidade de varrer a lista
+     else:
+         #comeco a varrer a lista,então enquanto posição for menor do que a quantidade de numeros da lista,ela
+         #vai continuar varrendo
+         pos = 0
+         while pos < len(lista):
+             #caso o valor n seja menor ou igual ao valor que está dentro da lista em determinada posição
+             #esse valor n irá assumir aquele específico lugar através do lista.insert
+             if n <= lista[pos]:
+                 lista.insert(pos,n)
+                 break
+             pos+=1
 print(lista)
