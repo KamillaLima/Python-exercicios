@@ -1,5 +1,13 @@
 from time import sleep
 def contagem (i,f,p):
+    """
+    para criar esse param de uma vez,é só digitar 3 aspas duplas e para visualizar essas informações é só fazer
+    help(nome da função) - help(contagem)
+    :param i: recebe o valor de inicio
+    :param f: recebe o valor para finalizar
+    :param p: recebe o valor que irá pular
+    :return:
+    """
     print(f"{'Contagem':^40}")
     if i<=f:
         if p>0:
